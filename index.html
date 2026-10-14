@@ -43,6 +43,7 @@
 .d3 { --dA: #2FC18B; --dB: #0B5A40; } .d4 { --dA: #A9B4C4; --dB: #3D4757; } .d5 { --dA: #5A6478; --dB: #151A24; } .d6 { --dA: #8E7CF0; --dB: #33267F; }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
 html { height: 100%; min-height: 100lvh; }
 html, body { background: var(--bg); overscroll-behavior: none; }
 body { height: 100%; margin: 0; overflow: hidden; color: var(--text); font: 400 16px/1.45 var(--body); -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
@@ -645,6 +646,11 @@ svg { width: 20px; height: 20px; flex: none; }
 .t-actions:has(.t-adj) { gap: 6px; }
 .t-actions:has(.t-adj) .btn { flex: 1 1 auto; min-width: 0; padding-left: 8px; padding-right: 8px; }
 .sh-note { color: var(--muted); font-size: 14.5px; line-height: 1.5; margin: 0 0 6px; }
+.media.has-video video, .media.has-poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.media.has-poster { background: #000; }
+.media.has-video { background: #000; }
+.hero-pic { position: absolute; right: 18px; top: 18px; width: 88px; height: 88px; object-fit: cover; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.35); border: 2px solid rgba(255,255,255,.35); }
+.card.vids .btn[disabled] { opacity: .8; }
 </style></head><body><div id="splash" aria-hidden="true"><svg viewBox="0 0 1024 1024"><defs><linearGradient id="spG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE3A3"/><stop offset=".45" stop-color="#F6B547"/><stop offset="1" stop-color="#C47E12"/></linearGradient></defs><circle class="sp-ring" cx="512" cy="512" r="318" fill="none" stroke="url(#spG)" stroke-width="64" stroke-linecap="round" transform="rotate(-90 512 512)"/><g class="sp-f"><path transform="translate(512 512) skewX(-9) translate(-512 -512)" d="M418 330h214v84H512v60h100v80H512v144h-94z" fill="#fff"/></g></svg><div class="sp-word">FORMA</div><div class="sp-tag">Train smart · every day</div></div><div id="app"></div><script src="three.min.js"></script><script>/* ---------- Figure engine: angle-based stick figure with IK pins ---------- */
 var RAD = Math.PI / 180;
 var LEN = { T: 28, UA: 14, FA: 13, TH: 18, SH: 18, NK: 4, HR: 5.5 };
@@ -1029,8 +1035,8 @@ X('pu', { n: 'Push-up', tg: 'Chest · triceps · shoulders', T: 2.2, pin: ['wr',
   how: ['Hands just wider than shoulders, body in one straight line.', 'Lower your chest until it nearly touches the floor.', 'Push back up. Drop to your knees if form breaks.', 'For more muscle, take 3 seconds on the way down.'] });
 X('wpu', { n: 'Wide push-up', tg: 'Outer chest', T: 2.2, pin: ['wr', 'wr2'], A: PUA, B: PUB,
   how: ['Place hands about 1.5× shoulder width.', 'Lower slowly with elbows pointing out at about 60°.', 'Press up, squeezing your chest.'] });
-X('dpu', { n: 'Diamond push-up', tg: 'Triceps · inner chest', T: 2.2, pin: ['wr', 'wr2'], A: PUA, B: PUB,
-  how: ['Touch thumbs and index fingers together under your chest.', 'Lower with elbows close to your ribs.', 'Push up. Do these on your knees if needed.'] });
+X('dpu', { n: 'Close-grip push-up', tg: 'Triceps · inner chest', T: 2.2, pin: ['wr', 'wr2'], A: PUA, B: PUB,
+  how: ['Place your hands a little narrower than shoulder width.', 'Lower with elbows close to your ribs.', 'Push up. Do these on your knees if needed.'] });
 X('inpu', { n: 'Incline push-up', tg: 'Lower chest · triceps', T: 2.2, pin: ['wr', 'wr2'], props: ['chairW'], A: { t: 140, l: -40, s: -40 }, B: { t: 126, l: -54, s: -54 },
   how: ['Hands on a sturdy chair, sofa arm or bed edge.', 'Lower your chest to the edge.', 'Press back up, body straight.'] });
 X('decpu', { n: 'Decline push-up', tg: 'Upper chest · shoulders', T: 2.2, ay: 'an', gy: 20, pin: ['wr', 'wr2'], props: ['boxF'], A: { t: 96, l: -84, s: -84 }, B: { t: 84, l: -96, s: -96 },
@@ -1110,8 +1116,8 @@ X('bench', { n: 'Barbell bench press', tg: 'Chest · triceps · shoulders', T: 2
   how: ['Lie on the bench, eyes under the bar, feet flat.', 'Lower the bar to mid-chest with elbows at about 45°.', 'Press up until arms are straight.', 'Before your working sets, do 2 lighter warm-up sets (about 50% and 75% of the weight).'] });
 X('idbp', { n: 'Incline dumbbell press', tg: 'Upper chest · shoulders', T: 2.4, ax: 'hip', ay: 'hip', gy: 22, props: ['incline', 'db'], A: { t: -140, hd: -10, l: 85, s: 0, a: 170, f: 170 }, B: { t: -140, hd: -10, l: 85, s: 0, a: 20, f: 175 },
   how: ['Set the bench to about 30–45°.', 'Lower the dumbbells to the sides of your upper chest.', 'Press up and slightly together.'] });
-X('cfly', { n: 'Cable fly', tg: 'Chest', front: 1, T: 2.4, ax: 'hip', props: ['cable'], cab: [54, 2], A: { a: 95, f: 100, l: 6, s: 6 }, B: { a: 15, f: -40, l: 6, s: 6 },
-  how: ['Set the pulleys high, step forward between them.', 'With a slight elbow bend, bring your hands together in front.', 'Return slowly until you feel a chest stretch.'] });
+X('cfly', { n: 'Dumbbell fly', tg: 'Chest', front: 1, T: 2.4, ax: 'hip', props: ['cable'], cab: [54, 2], A: { a: 95, f: 100, l: 6, s: 6 }, B: { a: 15, f: -40, l: 6, s: 6 },
+  how: ['Lie on a bench, dumbbells above your chest, palms facing.', 'With a slight elbow bend, open your arms wide until you feel a chest stretch.', 'Squeeze the dumbbells back together over your chest.'] });
 X('pd', { n: 'Triceps pushdown', tg: 'Triceps', T: 1.8, props: ['cable'], cab: [16, 0], A: { t: 172, a: 8, f: 150, l: 5, s: 5 }, B: { t: 172, a: 8, f: 8, l: 5, s: 5 },
   how: ['Grab the rope or bar at a high pulley.', 'Keep elbows pinned to your sides.', 'Push down until arms are straight, then return slowly.'] });
 X('ohe', { n: 'Overhead dumbbell extension', tg: 'Triceps (long head)', T: 2.2, props: ['db'], A: { a: 175, f: -25 }, B: { a: 175, f: 178 },
@@ -1124,8 +1130,8 @@ X('bdip', { n: 'Bench dips', tg: 'Triceps', T: 2.2, pin: ['wr', 'wr2', 'an', 'an
 /* Gym — back & biceps */
 X('pullup', { n: 'Pull-up', tg: 'Lats · biceps', T: 2.4, ax: 'wr', ay: 'wr', gy: 96, pin: ['wr', 'wr2'], ps: { arm: -1 }, props: ['pullbar'], A: { a: 182, f: 182, l: -6, s: -40 }, B: { a: 182, f: 182, l: -6, s: -40, dy: -17 },
   how: ['Hang from the bar, hands just wider than shoulders.', 'Pull your chest toward the bar.', 'Lower all the way down. Use the assisted machine if needed.', 'Warm up with 1 easy set (band-assisted or a few slow reps) before your working sets.'] });
-X('latpd', { n: 'Lat pulldown', tg: 'Lats · biceps', T: 2.4, ax: 'hip', ay: 'hip', gy: 22, props: ['seat', 'cable', 'hbar'], cab: [4, -6], A: { t: 176, l: 88, s: 2, a: 172, f: 176 }, B: { t: 174, l: 88, s: 2, a: -20, f: 165 },
-  how: ['Sit with thighs under the pads, wide grip on the bar.', 'Pull the bar down to your upper chest.', 'Let it rise slowly with control.'] });
+X('latpd', { n: 'Assisted pull-up', tg: 'Lats · biceps', T: 2.4, ax: 'hip', ay: 'hip', gy: 22, props: ['seat', 'cable', 'hbar'], cab: [4, -6], A: { t: 176, l: 88, s: 2, a: 172, f: 176 }, B: { t: 174, l: 88, s: 2, a: -20, f: 165 },
+  how: ['Kneel on the assisted pull-up machine pad, wide grip on the handles.', 'Pull your chest up toward the handles.', 'Lower slowly with control. Less assistance = harder.'] });
 X('bbrow', { n: 'Barbell row', tg: 'Mid back · lats', T: 2.2, props: ['plate'], A: { t: 112, hd: -15, l: 18, s: -8 }, B: { t: 112, hd: -15, l: 18, s: -8, a: -55, f: -5 },
   how: ['Hinge forward with a flat back, knees soft.', 'Pull the bar to your lower ribs.', 'Lower it with control.'] });
 X('scrow', { n: 'Seated cable row', tg: 'Mid back', T: 2.4, ax: 'hip', ay: 'hip', gy: 14, props: ['seat', 'cable'], cab: [56, 72], A: { t: 160, l: 82, s: 82, a: 92, f: 92 }, B: { t: 182, l: 82, s: 82, a: -75, f: 85 },
@@ -1134,14 +1140,14 @@ X('fpull', { n: 'Face pull', tg: 'Rear shoulders · upper back', T: 2.2, props: 
   how: ['Rope at face height on the cable.', 'Pull toward your forehead, elbows high and wide.', 'Pause, then return slowly.'] });
 X('bbcurl', { n: 'Barbell curl', tg: 'Biceps', T: 2, props: ['plate'], A: { a: 2, f: 2 }, B: { a: 8, f: 155 },
   how: ['Stand tall, palms forward, elbows at your sides.', 'Curl the bar up without swinging.', 'Lower slowly.'] });
-X('ezcurl', { n: 'EZ-bar curl', tg: 'Biceps', T: 2, props: ['plate'], A: { a: 2, f: 2 }, B: { a: 8, f: 155 },
-  how: ['Grip the angled part of the EZ bar.', 'Curl up keeping elbows still.', 'Lower over 2–3 seconds.'] });
+X('ezcurl', { n: 'Dumbbell curl', tg: 'Biceps', T: 2, props: ['plate'], A: { a: 2, f: 2 }, B: { a: 8, f: 155 },
+  how: ['Hold a dumbbell in each hand, palms forward.', 'Curl up keeping elbows still at your sides.', 'Lower over 2–3 seconds.'] });
 X('hcurl', { n: 'Hammer curl', tg: 'Biceps · forearms', T: 2, props: ['db'], A: { a: 2, f: 2 }, B: { a: 8, f: 155 },
   how: ['Hold dumbbells with palms facing each other.', 'Curl up keeping that grip.', 'Lower with control.'] });
 
 /* Gym — legs */
-X('bsq', { n: 'Barbell back squat', tg: 'Quads · glutes', T: 2.6, props: ['plate'], A: { a: -42, f: 178 }, B: { t: 140, l: 88, s: -28, a: -80, f: 140 },
-  how: ['Bar on your upper back, feet shoulder-width.', 'Brace your core and sit down to at least parallel.', 'Drive up through your whole foot.', 'Before your working sets, do 2 lighter warm-up sets (about 50% and 75% of the weight).'] });
+X('bsq', { n: 'Dumbbell squat', tg: 'Quads · glutes', T: 2.6, props: ['plate'], A: { a: -42, f: 178 }, B: { t: 140, l: 88, s: -28, a: -80, f: 140 },
+  how: ['Hold a dumbbell in each hand at your sides, feet shoulder-width.', 'Brace your core and sit down to at least parallel.', 'Drive up through your whole foot.', 'Before your working sets, do 2 lighter warm-up sets (about 50% and 75% of the weight).'] });
 X('lpress', { n: 'Leg press', tg: 'Quads · glutes', T: 2.4, ax: 'hip', ay: 'hip', gy: 18, props: ['incline', 'pad'], A: { t: -125, hd: -15, l: 125, s: 128, a: 60, f: 60 }, B: { t: -125, hd: -15, l: 172, s: 85, a: 60, f: 60 },
   how: ['Feet shoulder-width in the middle of the platform.', 'Lower until knees reach about 90°.', 'Press back up without locking your knees.'] });
 X('rdl', { n: 'Romanian deadlift', tg: 'Hamstrings · glutes', T: 2.6, props: ['plate'], A: { l: 2, s: 2 }, B: { t: 98, hd: -10, l: 14, s: 8 },
@@ -1168,8 +1174,8 @@ X('frr', { n: 'Front raise', tg: 'Front shoulders', T: 2, props: ['db'], A: { a:
   how: ['Dumbbells in front of your thighs.', 'Raise straight arms to shoulder height.', 'Lower with control.'] });
 
 /* Gym — cardio & core */
-X('run', { n: 'Treadmill intervals', tg: 'Stamina · heart', T: 0.6, ax: 'hip', gy: 6, props: ['tread'], A: { t: 172, l: 40, s: 15, l2: -30, s2: -85, a: -40, f: 20, a2: 55, f2: 130 }, B: { t: 172, l: -30, s: -85, l2: 40, s2: 15, a: 55, f: 130, a2: -40, f2: 20 },
-  how: ['Each set = a fast run you can just hold.', 'Rest time = walk slowly on the belt.', 'Use the side rails only to get on and off.'] });
+X('run', { n: 'Running intervals', tg: 'Stamina · heart', T: 0.6, ax: 'hip', gy: 6, props: ['tread'], A: { t: 172, l: 40, s: 15, l2: -30, s2: -85, a: -40, f: 20, a2: 55, f2: 130 }, B: { t: 172, l: -30, s: -85, l2: 40, s2: 15, a: 55, f: 130, a2: -40, f2: 20 },
+  how: ['Each set = a fast run you can just hold (in place, outside or on a treadmill).', 'Rest time = walk slowly.', 'Land softly on the front of your foot.'] });
 X('walk', { n: 'Incline walk', tg: 'Easy cardio · recovery', T: 1.2, ax: 'hip', gy: 6, props: ['tread'], A: { l: 22, s: 15, l2: -18, s2: -30, a: -20, f: -10, a2: 20, f2: 30 }, B: { l: -18, s: -30, l2: 22, s2: 15, a: 20, f: 30, a2: -20, f2: -10 },
   how: ['Set the incline to 5–8%.', 'Walk at a pace where you can still talk.', 'Do not hold the rails.'] });
 X('row', { n: 'Rowing machine', tg: 'Full body · stamina', T: 1.8, ay: 'hip', gy: 14, props: ['rail'], A: { t: 148, l: 150, s: 62, a: 90, f: 90 }, B: { t: 192, l: 95, s: 95, a: -65, f: 95 },
@@ -1504,9 +1510,9 @@ var F3 = (function () {
     var hgt = window.innerHeight;
     if (st && /iP(hone|od|ad)/.test(navigator.userAgent)) {
       var sh = (window.innerWidth > window.innerHeight) ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
-      hgt = Math.max(hgt, sh);
+      if (sh > 0) hgt = Math.max(hgt, sh);
     }
-    document.documentElement.style.setProperty('--app-h', hgt + 'px');
+    if (hgt > 0) document.documentElement.style.setProperty('--app-h', hgt + 'px');
   }
   fit(); window.addEventListener('resize', fit); window.addEventListener('orientationchange', function () { setTimeout(fit, 300); });
 })();
@@ -1885,25 +1891,60 @@ function vidDel(id) {
     t.oncomplete = function () { if (vidURL[id]) URL.revokeObjectURL(vidURL[id]); delete vidURL[id]; vidKnown[id] = false; res(); };
   }); });
 }
+/* ---- demo video pack: videos/index.json + videos/<id>.mp4/.jpg in the app folder ---- */
+var PACK = {};
+try { PACK = JSON.parse(localStorage.getItem('forma.pack') || '{}') || {}; } catch (e) { PACK = {}; }
+function loadPack() {
+  if (location.protocol === 'file:' || !window.fetch) return;
+  fetch('videos/index.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (j) {
+    j = j && typeof j === 'object' ? j : {};
+    var a = JSON.stringify(j), b = JSON.stringify(PACK);
+    if (a === b) return;
+    PACK = j; try { localStorage.setItem('forma.pack', a); } catch (e) {}
+    var top = nav.stack[nav.stack.length - 1];
+    if (!top || top.name !== 'play') render('swap');
+  }).catch(function () {});
+}
+function packOf(id) { var p = PACK[id]; return p && p.v ? p : null; }
+function packVideo(ex, wrap, c, tag) {
+  var p = packOf(ex.id); if (!p) return false;
+  var v = document.createElement('video');
+  v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.setAttribute('muted', ''); v.preload = 'auto';
+  if (p.p) v.poster = 'videos/' + p.p;
+  v.src = 'videos/' + p.v; v.setAttribute('aria-label', ex.n + ' demo video');
+  wrap.classList.add('has-video'); wrap.insertBefore(v, c); c.remove();
+  if (tag) tag.remove();
+  var pl = v.play(); if (pl && pl.catch) pl.catch(function () {});
+  return v;
+}
 function media(ex, size) {
   var wrap = h('div', 'media media-' + size);
   var c = h('canvas'); c.setAttribute('aria-hidden', 'true'); wrap.appendChild(c);
-  var tag = null;
+  var tag = null, pk = ex.kind !== 'breath' && packOf(ex.id);
+  if (pk && size !== 'big' && pk.p) {
+    wrap.classList.add('photo', 'has-poster'); c.remove();
+    var im = new Image(); im.alt = ''; im.loading = 'lazy'; im.decoding = 'async'; im.src = 'videos/' + pk.p; wrap.appendChild(im);
+    return wrap;
+  }
   if (size === 'big' && ex.kind !== 'breath') { tag = h('span', 'media-tag', '<i></i>Muscles worked'); wrap.appendChild(tag); }
-  requestAnimationFrame(function () { addAnim(c, ex); });
+  if (pk && size === 'big') packVideo(ex, wrap, c, tag); else requestAnimationFrame(function () { addAnim(c, ex); });
   if (size === 'big' && ex.kind !== 'breath') {
     vidGet(ex.id).then(function (url) {
       if (!url || !wrap.isConnected && !document.body.contains(wrap)) { if (!url) return; }
       var v = document.createElement('video');
       v.src = url; v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.setAttribute('aria-label', ex.n + ' demo video');
-      wrap.classList.add('has-video'); wrap.insertBefore(v, c); c.remove();
+      var pv = wrap.querySelector('video'); if (pv) { pv.pause(); pv.remove(); } if (!tag) { tag = h('span', 'media-tag'); wrap.appendChild(tag); }
+      wrap.classList.add('has-video'); if (c.parentNode) { wrap.insertBefore(v, c); c.remove(); } else wrap.insertBefore(v, wrap.firstChild);
       if (tag) tag.innerHTML = '<i class="v"></i>Your video';
       var p = v.play(); if (p && p.catch) p.catch(function () {});
     });
   }
   return wrap;
 }
-function heroFig(ex) { var c = h('canvas', 'hero-fig'); c.setAttribute('aria-hidden', 'true'); requestAnimationFrame(function () { addAnim(c, ex); }); return c; }
+function heroFig(ex) {
+  var pk = packOf(ex.id);
+  if (pk && pk.p) { var im = new Image(); im.className = 'hero-pic'; im.alt = ''; im.src = 'videos/' + pk.p; return im; }
+ var c = h('canvas', 'hero-fig'); c.setAttribute('aria-hidden', 'true'); requestAnimationFrame(function () { addAnim(c, ex); }); return c; }
 function addAnim(canvas, ex) {
   var a = { c: canvas, ex: ex, vis: true, t0: Math.random() * 3, still: !!canvas.closest('.media-thumb') };
   anims.push(a);
@@ -2019,7 +2060,7 @@ function render(how) {
   Array.prototype.forEach.call(tabsEl.children, function (b) { b.classList.toggle('on', b.dataset.t === nav.tab); b.setAttribute('aria-current', b.dataset.t === nav.tab ? 'page' : 'false'); });
   wake(!!top);
 }
-function screen(cls) { var s = h('section', 'screen ' + (cls || '')); s.appendChild(h('div', 'scroll')); return s; }
+function mkScreen(cls) { var s = h('section', 'screen ' + (cls || '')); s.appendChild(h('div', 'scroll')); return s; }
 function largeTitle(eyebrow, title) {
   var hd = h('header', 'lt');
   if (eyebrow) hd.appendChild(h('p', 'lt-eyebrow', eyebrow));
@@ -2070,7 +2111,7 @@ document.addEventListener('visibilitychange', function () { if (document.visibil
 var DC = ['d0', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6'];
 
 function scrToday() {
-  var s = screen('tab-screen'), sc = s.firstChild, st = load(), t = today(), tk = iso(t), di = wd(t), cy = cycle(), ph = PHASES[cy.phase];
+  var s = mkScreen('tab-screen'), sc = s.firstChild, st = load(), t = today(), tk = iso(t), di = wd(t), cy = cycle(), ph = PHASES[cy.phase];
   var tp = todayPlan(), isRest = tp.day < 0 || st.rest[tk];
   sc.appendChild(h('div', 'brandbar', LOGO_SVG + '<span>FORMA</span>'));
   sc.appendChild(largeTitle(fmtDate(t, { weekday: 'long', day: 'numeric', month: 'long' }), greeting()));
@@ -2150,7 +2191,7 @@ function missedThisWeek() {
 
 function dayKind(f) { f = f.toLowerCase(); return /mobility|recovery/.test(f) ? ['Recovery', 'k-rec'] : /cardio/.test(f) ? ['Cardio', 'k-cardio'] : /full body/.test(f) ? ['Full body', 'k-full'] : ['Strength', 'k-str']; }
 function scrPlan() {
-  var s = screen('tab-screen'), sc = s.firstChild, st = load(), t = today(), di = wd(t), mon = monday(t), cy = cycle(), start = fromIso(st.start);
+  var s = mkScreen('tab-screen'), sc = s.firstChild, st = load(), t = today(), di = wd(t), mon = monday(t), cy = cycle(), start = fromIso(st.start);
   sc.appendChild(largeTitle(fmtDate(mon, { day: 'numeric', month: 'short' }) + ' – ' + fmtDate(addDays(mon, 6), { day: 'numeric', month: 'short' }), 'Weekly plan'));
 
   // settings card: where + level + days
@@ -2228,7 +2269,7 @@ function scrPlan() {
 }
 
 function scrDay(e) {
-  var s = screen('push-screen'), sc = s.firstChild, d = buildDay(e.mode, e.day), cy = cycle(), ph = PHASES[cy.phase], prog = progOf(e.mode, e.day);
+  var s = mkScreen('push-screen'), sc = s.firstChild, d = buildDay(e.mode, e.day), cy = cycle(), ph = PHASES[cy.phase], prog = progOf(e.mode, e.day);
   s.insertBefore(navBar(DAYS[e.wd != null ? e.wd : e.day], nav.stack.length > 1 ? 'Back' : (nav.tab === 'plan' ? 'Plan' : 'Today')), sc);
   var hero = h('header', 'dhero ' + DC[e.day]);
   var lead = d.items.filter(function (it) { return it.sec === 'm'; })[0];
@@ -2274,7 +2315,7 @@ function scrDay(e) {
 
 function scrEx(e) {
   var d = buildDay(e.mode, e.day), it = d.items[e.idx], ex = it.ex, prog = progOf(e.mode, e.day);
-  var s = screen('push-screen ex-screen'), sc = s.firstChild;
+  var s = mkScreen('push-screen ex-screen'), sc = s.firstChild;
   s.insertBefore(navBar('Exercise ' + (e.idx + 1) + ' of ' + d.items.length, 'Back'), sc);
   var m = media(ex, 'big'); sc.appendChild(m);
 
@@ -2494,7 +2535,7 @@ function scrEx(e) {
 }
 
 function scrProgress() {
-  var s = screen('tab-screen'), sc = s.firstChild, st = load(), c = counts(), start = fromIso(st.start), t = today();
+  var s = mkScreen('tab-screen'), sc = s.firstChild, st = load(), c = counts(), start = fromIso(st.start), t = today();
   if (!nav.month) nav.month = new Date(t.getFullYear(), t.getMonth(), 1);
   var m = nav.month;
   sc.appendChild(largeTitle('Tracking since ' + fmtDate(start, { day: 'numeric', month: 'short', year: 'numeric' }), 'Progress'));
@@ -2544,6 +2585,30 @@ function scrProgress() {
     pb.appendChild(h('div', 'pb-row', '<span class="pb-name">' + esc(EX[x.id].n) + '</span><span class="pb-val">' + (x.hold ? fmtSec(x.b.sec) + ' <small>hold</small>' : fmtKg(x.b.kg) + ' <small>× ' + x.b.reps + '</small>') + '</span><span class="pb-date">' + fmtDate(fromIso(x.b.date), { day: 'numeric', month: 'short' }) + '</span>'));
   });
   sc.appendChild(pb);
+
+  // demo videos
+  var vids = Object.keys(EX).filter(function (id) { return EX[id].kind !== 'breath' && packOf(id); });
+  if (vids.length) {
+    var vc = h('section', 'card vids');
+    vc.appendChild(h('div', 'card-head', '<h3>Demo videos</h3><span>' + vids.length + ' exercises</span>'));
+    var vn = h('p', 'bk-note', 'Videos load the first time you open an exercise. Save them all now so every workout works offline.');
+    var vb = h('button', 'btn btn-ghost btn-wide', ICON.save + ' Save all videos for offline');
+    vc.appendChild(vn); vc.appendChild(vb);
+    var mark = function (n, all) { vb.innerHTML = n >= all ? 'All ' + all + ' videos saved for offline' : ICON.save + ' Save all videos for offline (' + n + ' of ' + all + ' saved)'; vb.disabled = n >= all; };
+    var files = []; vids.forEach(function (id) { var p = packOf(id); files.push('videos/' + p.v); if (p.p) files.push('videos/' + p.p); });
+    var abs = function (f) { return new URL(f, location.href).href; };
+    if (window.caches) caches.open('forma-media').then(function (mc) { return Promise.all(files.map(function (f) { return mc.match(abs(f)); })); }).then(function (rs) { mark(rs.filter(Boolean).length, files.length); }).catch(function () {});
+    vb.onclick = function () {
+      if (!navigator.onLine) { toast('You\'re offline', 'Connect to the internet to save videos.'); return; }
+      vb.disabled = true; var i = 0, ok = 0;
+      (function next() {
+        if (i >= files.length) { mark(ok, files.length); if (ok >= files.length) toast('Videos saved', 'Every demo now works offline.'); else { vb.disabled = false; toast('Some videos didn\'t save', 'Tap again to retry.'); } return; }
+        var f = files[i++]; vb.textContent = 'Saving ' + i + ' of ' + files.length + '…';
+        fetch(f).then(function (r) { if (r.ok) ok++; return r.blob(); }).catch(function () {}).then(next);
+      })();
+    };
+    sc.appendChild(vc);
+  }
 
   // backup
   var bk = h('section', 'card backup');
@@ -2605,7 +2670,7 @@ function restoreBackup(f) {
       card.appendChild(h('h3', '', 'Restore backup?'));
       card.appendChild(h('p', '', 'This replaces what\'s on this phone with your backup' + (j.saved ? ' from ' + fmtDate(new Date(j.saved), { day: 'numeric', month: 'short', year: 'numeric' }) : '') + ' (' + Object.keys(d.done).length + ' workouts).'));
       var y = h('button', 'btn btn-primary btn-wide', 'Restore'), n = h('button', 'btn btn-ghost btn-wide', 'Cancel');
-      y.onclick = function () { mem = d; load(); save(); close(); render('swap'); toast('Backup restored', 'Welcome back!'); };
+      y.onclick = function () { try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {} mem = null; load(); nav.stack = []; close(); render('swap'); toast('Backup restored', 'Welcome back!'); };
       n.onclick = close;
       card.appendChild(y); card.appendChild(n);
     });
@@ -2958,7 +3023,7 @@ var LOGO_SVG = '<svg class="logo" viewBox="0 0 1024 1024" aria-hidden="true"><de
   });
   app.appendChild(tabsEl);
   try { history.replaceState({ d: 0 }, ''); } catch (e) { histOK = false; }
-  load(); render('init');
+  load(); render('init'); loadPack();
   var sp = document.getElementById('splash');
   if (sp) { var seen = false; try { seen = sessionStorage.getItem('forma.splash') === '1'; sessionStorage.setItem('forma.splash', '1'); } catch (e) {}
     setTimeout(function () { sp.classList.add('gone'); setTimeout(function () { sp.remove(); }, 500); }, seen ? 250 : 1500); }

@@ -1,0 +1,912 @@
+{
+ "jj": {
+  "v": "jj.mp4",
+  "p": "jj.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=NeN8c-94EOo",
+  "srcId": "NeN8c-94EOo",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ },
+ "armc": {
+  "v": "armc.mp4",
+  "p": "armc.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=sJdu2ydHeWM",
+  "srcId": "sJdu2ydHeWM",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "hk": {
+  "v": "hk.mp4",
+  "p": "hk.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=VGb_fJ81yWc",
+  "srcId": "VGb_fJ81yWc",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ },
+ "bk": {
+  "v": "bk.mp4",
+  "p": "bk.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=oAUex_Xudw4",
+  "srcId": "oAUex_Xudw4",
+  "by": "Fit Drona",
+  "lic": "CC BY 3.0"
+ },
+ "lswing": {
+  "v": "lswing.mp4",
+  "p": "lswing.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=vibiMOKVdkk",
+  "srcId": "vibiMOKVdkk",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "hipc": {
+  "v": "hipc.mp4",
+  "p": "hipc.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=l9kNRGMUb-Q",
+  "srcId": "l9kNRGMUb-Q",
+  "by": "Get Fit Done (formerly This is Fit Workouts)",
+  "lic": "CC BY 3.0"
+ },
+ "sbend": {
+  "v": "sbend.mp4",
+  "p": "sbend.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=aDoLlIXNpQc",
+  "srcId": "aDoLlIXNpQc",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "inch": {
+  "v": "inch.mp4",
+  "p": "inch.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=BXGmusshVTU",
+  "srcId": "BXGmusshVTU",
+  "by": "Bootcamp Ideas",
+  "lic": "CC BY 3.0"
+ },
+ "wgs": {
+  "v": "wgs.mp4",
+  "p": "wgs.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=FMMSypvSqsw",
+  "srcId": "FMMSypvSqsw",
+  "by": "Fitness Volt",
+  "lic": "CC BY 3.0"
+ },
+ "cat": {
+  "v": "cat.mp4",
+  "p": "cat.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=YmWhfGKJ0C0",
+  "srcId": "YmWhfGKJ0C0",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "pu": {
+  "v": "pu.mp4",
+  "p": "pu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=t0UHXfDmmf8",
+  "srcId": "t0UHXfDmmf8",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "wpu": {
+  "v": "wpu.mp4",
+  "p": "wpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=u0sc4sL5i54",
+  "srcId": "u0sc4sL5i54",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "dpu": {
+  "v": "dpu.mp4",
+  "p": "dpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=-mv9zLuqiOE",
+  "srcId": "-mv9zLuqiOE",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "inpu": {
+  "v": "inpu.mp4",
+  "p": "inpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=he4H0UPYM_0",
+  "srcId": "he4H0UPYM_0",
+  "by": "Lance Goyke",
+  "lic": "CC BY 3.0"
+ },
+ "decpu": {
+  "v": "decpu.mp4",
+  "p": "decpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=9AxdN8zN028",
+  "srcId": "9AxdN8zN028",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "dip": {
+  "v": "dip.mp4",
+  "p": "dip.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=rjdpMVtMehw",
+  "srcId": "rjdpMVtMehw",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "plank": {
+  "v": "plank.mp4",
+  "p": "plank.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=rT8wuGT7UT0",
+  "srcId": "rT8wuGT7UT0",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "sht": {
+  "v": "sht.mp4",
+  "p": "sht.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=3xK4sEyYD9Q",
+  "srcId": "3xK4sEyYD9Q",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "pike": {
+  "v": "pike.mp4",
+  "p": "pike.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=iFRP0DDex9k",
+  "srcId": "iFRP0DDex9k",
+  "by": "Lance Goyke",
+  "lic": "CC BY 3.0"
+ },
+ "trow": {
+  "v": "trow.mp4",
+  "p": "trow.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=00M5JG0ovcM",
+  "srcId": "00M5JG0ovcM",
+  "by": "Strength and Performance Stockport",
+  "lic": "CC BY 3.0"
+ },
+ "sup": {
+  "v": "sup.mp4",
+  "p": "sup.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=-ZUAL0zk-78",
+  "srcId": "-ZUAL0zk-78",
+  "by": "Sable Keith",
+  "lic": "CC BY 3.0"
+ },
+ "ytr": {
+  "v": "ytr.mp4",
+  "p": "ytr.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=z0oLEufwRno",
+  "srcId": "z0oLEufwRno",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "bdog": {
+  "v": "bdog.mp4",
+  "p": "bdog.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=proSinbw_64",
+  "srcId": "proSinbw_64",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "sq": {
+  "v": "sq.mp4",
+  "p": "sq.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=zawXRtyOTuA",
+  "srcId": "zawXRtyOTuA",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "sqj": {
+  "v": "sqj.mp4",
+  "p": "sqj.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=zuvzza9zPNo",
+  "srcId": "zuvzza9zPNo",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "lunge": {
+  "v": "lunge.mp4",
+  "p": "lunge.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=w_t9rE5T3mE",
+  "srcId": "w_t9rE5T3mE",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "rlunge": {
+  "v": "rlunge.mp4",
+  "p": "rlunge.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=zScOuwRnizY",
+  "srcId": "zScOuwRnizY",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "gb": {
+  "v": "gb.mp4",
+  "p": "gb.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=KvajO8I6feQ",
+  "srcId": "KvajO8I6feQ",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "ws": {
+  "v": "ws.mp4",
+  "p": "ws.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=y6RrKS76SAg",
+  "srcId": "y6RrKS76SAg",
+  "by": "Paul Sandburg Fitness",
+  "lic": "CC BY 3.0"
+ },
+ "calf": {
+  "v": "calf.mp4",
+  "p": "calf.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=oufRL_SB6Mk",
+  "srcId": "oufRL_SB6Mk",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "mc": {
+  "v": "mc.mp4",
+  "p": "mc.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=g1wnerWzORI",
+  "srcId": "g1wnerWzORI",
+  "by": "Fit Drona",
+  "lic": "CC BY 3.0"
+ },
+ "burpee": {
+  "v": "burpee.mp4",
+  "p": "burpee.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=sHLu6-liUL0",
+  "srcId": "sHLu6-liUL0",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ },
+ "sb": {
+  "v": "sb.mp4",
+  "p": "sb.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=DJdjCIfVgbQ",
+  "srcId": "DJdjCIfVgbQ",
+  "by": "Team of Warriors - \u05e6\u05d5\u05d5\u05ea \u05dc\u05d5\u05d7\u05de\u05d9\u05dd",
+  "lic": "CC BY 3.0"
+ },
+ "crunch": {
+  "v": "crunch.mp4",
+  "p": "crunch.jpg",
+  "w": 640,
+  "h": 480,
+  "src": "https://www.youtube.com/watch?v=bjG87FedFwM",
+  "srcId": "bjG87FedFwM",
+  "by": "P4P WORKOUTS",
+  "lic": "CC BY 3.0"
+ },
+ "lr": {
+  "v": "lr.mp4",
+  "p": "lr.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=ejsnwZl95bc",
+  "srcId": "ejsnwZl95bc",
+  "by": "WABBA",
+  "lic": "CC BY 3.0"
+ },
+ "bc": {
+  "v": "bc.mp4",
+  "p": "bc.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=ey-I0iCGajk",
+  "srcId": "ey-I0iCGajk",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "rt": {
+  "v": "rt.mp4",
+  "p": "rt.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=bjpr0xa0dVY",
+  "srcId": "bjpr0xa0dVY",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "fk": {
+  "v": "fk.mp4",
+  "p": "fk.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=wq45EYyH02w",
+  "srcId": "wq45EYyH02w",
+  "by": "P4P WORKOUTS",
+  "lic": "CC BY 3.0"
+ },
+ "splank": {
+  "v": "splank.mp4",
+  "p": "splank.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=40TqsHVnsMM",
+  "srcId": "40TqsHVnsMM",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "cobra": {
+  "v": "cobra.mp4",
+  "p": "cobra.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=6jnOmkh16G0",
+  "srcId": "6jnOmkh16G0",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "child": {
+  "v": "child.mp4",
+  "p": "child.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=Zo84QQcIu4w",
+  "srcId": "Zo84QQcIu4w",
+  "by": "Dream Garden Yoga Studio",
+  "lic": "CC BY 3.0"
+ },
+ "hamstr": {
+  "v": "hamstr.mp4",
+  "p": "hamstr.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=9N0qvQblZXk",
+  "srcId": "9N0qvQblZXk",
+  "by": "Motion",
+  "lic": "CC BY 3.0"
+ },
+ "quad": {
+  "v": "quad.mp4",
+  "p": "quad.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=f1zuIa3TQzc",
+  "srcId": "f1zuIa3TQzc",
+  "by": "Motion",
+  "lic": "CC BY 3.0"
+ },
+ "hipflex": {
+  "v": "hipflex.mp4",
+  "p": "hipflex.jpg",
+  "w": 946,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=pQ-3adRpSkY",
+  "srcId": "pQ-3adRpSkY",
+  "by": "RunRX",
+  "lic": "CC BY 3.0"
+ },
+ "dd": {
+  "v": "dd.mp4",
+  "p": "dd.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=9jw3O_DPusk",
+  "srcId": "9jw3O_DPusk",
+  "by": "Get Strong with Emily",
+  "lic": "CC BY 3.0"
+ },
+ "bench": {
+  "v": "bench.mp4",
+  "p": "bench.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/73/view/",
+  "srcId": "wger-bench",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "idbp": {
+  "v": "idbp.mp4",
+  "p": "idbp.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=sNIn0weNU9I",
+  "srcId": "sNIn0weNU9I",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "cfly": {
+  "v": "cfly.mp4",
+  "p": "cfly.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=5DWhC3ORNqo",
+  "srcId": "5DWhC3ORNqo",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "pd": {
+  "v": "pd.mp4",
+  "p": "pd.jpg",
+  "w": 960,
+  "h": 536,
+  "src": "https://www.youtube.com/watch?v=v7M6Y76yNA4",
+  "srcId": "v7M6Y76yNA4",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "ohe": {
+  "v": "ohe.mp4",
+  "p": "ohe.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=ihHwdvFxa2s",
+  "srcId": "ihHwdvFxa2s",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "skull": {
+  "v": "skull.mp4",
+  "p": "skull.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/246/view/",
+  "srcId": "wger-skull",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "bdip": {
+  "v": "bdip.mp4",
+  "p": "bdip.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=7HYCHSGLrIA",
+  "srcId": "7HYCHSGLrIA",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "pullup": {
+  "v": "pullup.mp4",
+  "p": "pullup.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=1cZ2I-8DR-Q",
+  "srcId": "1cZ2I-8DR-Q",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "latpd": {
+  "v": "latpd.mp4",
+  "p": "latpd.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/477/view/",
+  "srcId": "wger-latpd",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "bbrow": {
+  "v": "bbrow.mp4",
+  "p": "bbrow.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=fW6-ykp1cjk",
+  "srcId": "fW6-ykp1cjk",
+  "by": "Avid Fitness",
+  "lic": "CC BY 3.0"
+ },
+ "scrow": {
+  "v": "scrow.mp4",
+  "p": "scrow.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/512/view/",
+  "srcId": "wger-scrow",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "fpull": {
+  "v": "fpull.mp4",
+  "p": "fpull.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/222/view/",
+  "srcId": "wger-fpull",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "bbcurl": {
+  "v": "bbcurl.mp4",
+  "p": "bbcurl.jpg",
+  "w": 960,
+  "h": 536,
+  "src": "https://www.youtube.com/watch?v=K8zXiXxuXdU",
+  "srcId": "K8zXiXxuXdU",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "ezcurl": {
+  "v": "ezcurl.mp4",
+  "p": "ezcurl.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=P8MNX2ocp2U",
+  "srcId": "P8MNX2ocp2U",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "hcurl": {
+  "v": "hcurl.mp4",
+  "p": "hcurl.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=tAQBdzlCMyU",
+  "srcId": "tAQBdzlCMyU",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "bsq": {
+  "v": "bsq.mp4",
+  "p": "bsq.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=cY0jcQkh_3A",
+  "srcId": "cY0jcQkh_3A",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "lpress": {
+  "v": "lpress.mp4",
+  "p": "lpress.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/371/view/",
+  "srcId": "wger-lpress",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "rdl": {
+  "v": "rdl.mp4",
+  "p": "rdl.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=a4748ZoGab8",
+  "srcId": "a4748ZoGab8",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "lcurl": {
+  "v": "lcurl.mp4",
+  "p": "lcurl.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/365/view/",
+  "srcId": "wger-lcurl",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "craise": {
+  "v": "craise.mp4",
+  "p": "craise.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://wger.de/en/exercise/622/view/",
+  "srcId": "wger-craise",
+  "by": "Goulart (wger.de)",
+  "lic": "CC BY-SA 4.0"
+ },
+ "dl": {
+  "v": "dl.mp4",
+  "p": "dl.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=IBIoBpNfUPk",
+  "srcId": "IBIoBpNfUPk",
+  "by": "Best Barbells",
+  "lic": "CC BY 3.0"
+ },
+ "gsq": {
+  "v": "gsq.mp4",
+  "p": "gsq.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=IkzC-EFch3g",
+  "srcId": "IkzC-EFch3g",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "kbs": {
+  "v": "kbs.mp4",
+  "p": "kbs.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=OvuAYSbpFvw",
+  "srcId": "OvuAYSbpFvw",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ },
+ "farm": {
+  "v": "farm.mp4",
+  "p": "farm.jpg",
+  "w": 960,
+  "h": 538,
+  "src": "https://www.youtube.com/watch?v=_t2bl-bLvA8",
+  "srcId": "_t2bl-bLvA8",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ },
+ "ohp": {
+  "v": "ohp.mp4",
+  "p": "ohp.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=Pk0rpPkDph4",
+  "srcId": "Pk0rpPkDph4",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "lat": {
+  "v": "lat.mp4",
+  "p": "lat.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=mkFGCWTYK4E",
+  "srcId": "mkFGCWTYK4E",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "frr": {
+  "v": "frr.mp4",
+  "p": "frr.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=y1YpQYlqp9s",
+  "srcId": "y1YpQYlqp9s",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "run": {
+  "v": "run.mp4",
+  "p": "run.jpg",
+  "w": 442,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=1lC6-O7cMqc",
+  "srcId": "1lC6-O7cMqc",
+  "by": "Chan Vekaria",
+  "lic": "CC BY 3.0"
+ },
+ "walk": {
+  "v": "walk.mp4",
+  "p": "walk.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=N8IAVtk6o3I",
+  "srcId": "N8IAVtk6o3I",
+  "by": "Fitnessyard",
+  "lic": "CC BY 3.0"
+ },
+ "row": {
+  "v": "row.mp4",
+  "p": "row.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=l1d_Xzgmoc4",
+  "srcId": "l1d_Xzgmoc4",
+  "by": "FitnessScape",
+  "lic": "CC BY 3.0"
+ },
+ "bike": {
+  "v": "bike.mp4",
+  "p": "bike.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=_XwaTigA2_Y",
+  "srcId": "_XwaTigA2_Y",
+  "by": "Barbell Logic",
+  "lic": "CC BY 3.0"
+ },
+ "ccrunch": {
+  "v": "ccrunch.mp4",
+  "p": "ccrunch.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=H7InqZyiPX4",
+  "srcId": "H7InqZyiPX4",
+  "by": "SquareOne",
+  "lic": "CC BY 3.0"
+ },
+ "hkr": {
+  "v": "hkr.mp4",
+  "p": "hkr.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=weQlNN6CESM",
+  "srcId": "weQlNN6CESM",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "arpu": {
+  "v": "arpu.mp4",
+  "p": "arpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=31-kKEL8gRI",
+  "srcId": "31-kKEL8gRI",
+  "by": "Change Your Body Boot Camps, Newton, MA",
+  "lic": "CC BY 3.0"
+ },
+ "cpu": {
+  "v": "cpu.mp4",
+  "p": "cpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=N6WYaOwhs6I",
+  "srcId": "N6WYaOwhs6I",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "tpu": {
+  "v": "tpu.mp4",
+  "p": "tpu.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=t0UHXfDmmf8",
+  "srcId": "t0UHXfDmmf8",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "epike": {
+  "v": "epike.mp4",
+  "p": "epike.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=WUk0pWUpjp8",
+  "srcId": "WUk0pWUpjp8",
+  "by": "Change Your Body Boot Camps, Newton, MA",
+  "lic": "CC BY 3.0"
+ },
+ "bss": {
+  "v": "bss.mp4",
+  "p": "bss.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=wXasPD_vKqQ",
+  "srcId": "wXasPD_vKqQ",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ },
+ "slgb": {
+  "v": "slgb.mp4",
+  "p": "slgb.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=DSOSbc67XmU",
+  "srcId": "DSOSbc67XmU",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "psq": {
+  "v": "psq.mp4",
+  "p": "psq.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=1cJ8CpswD1M",
+  "srcId": "1cJ8CpswD1M",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "sqpulse": {
+  "v": "sqpulse.mp4",
+  "p": "sqpulse.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=zawXRtyOTuA",
+  "srcId": "zawXRtyOTuA",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "jlunge": {
+  "v": "jlunge.mp4",
+  "p": "jlunge.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=EOLx5Q11VqM",
+  "srcId": "EOLx5Q11VqM",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "hollow": {
+  "v": "hollow.mp4",
+  "p": "hollow.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=aWtb8U8xxQg",
+  "srcId": "aWtb8U8xxQg",
+  "by": "Flex: Mind, Body \\u0026 Soul",
+  "lic": "CC BY 3.0"
+ },
+ "vup": {
+  "v": "vup.mp4",
+  "p": "vup.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=S-aGNbVYyFA",
+  "srcId": "S-aGNbVYyFA",
+  "by": "David Kimmerle",
+  "lic": "CC BY 3.0"
+ },
+ "slc": {
+  "v": "slc.mp4",
+  "p": "slc.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=VWqLzAFKiN8",
+  "srcId": "VWqLzAFKiN8",
+  "by": "Paul Sandburg Fitness",
+  "lic": "CC BY 3.0"
+ },
+ "bwalk": {
+  "v": "bwalk.mp4",
+  "p": "bwalk.jpg",
+  "w": 960,
+  "h": 540,
+  "src": "https://www.youtube.com/watch?v=D-0PJCY0KPA",
+  "srcId": "D-0PJCY0KPA",
+  "by": "ExperienceLifeMag",
+  "lic": "CC BY 3.0"
+ }
+}
