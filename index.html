@@ -43,7 +43,7 @@
 .d3 { --dA: #2FC18B; --dB: #0B5A40; } .d4 { --dA: #A9B4C4; --dB: #3D4757; } .d5 { --dA: #5A6478; --dB: #151A24; } .d6 { --dA: #8E7CF0; --dB: #33267F; }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html { height: 100%; }
+html { height: 100%; min-height: 100lvh; }
 html, body { background: var(--bg); overscroll-behavior: none; }
 body { height: 100%; margin: 0; overflow: hidden; color: var(--text); font: 400 16px/1.45 var(--body); -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
 :where(button, a.btn) { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; touch-action: manipulation; -webkit-user-select: none; user-select: none; text-decoration: none; }
@@ -53,7 +53,7 @@ h1, h2, h3, p { margin: 0; }
 h1, h2, h3 { text-wrap: balance; }
 svg { width: 20px; height: 20px; flex: none; }
 
-#app { position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 100%; max-width: 560px; margin: 0 auto; overflow: hidden; background: var(--bg); }
+#app { position: fixed; top: 0; right: 0; left: 0; height: 100vh; height: 100lvh; height: var(--app-h, 100lvh); width: 100%; max-width: 560px; margin: 0 auto; overflow: hidden; background: var(--bg); }
 .stack { position: absolute; top: env(safe-area-inset-top, 0px); right: 0; bottom: 0; left: 0; }
 .screen { position: absolute; inset: 0; display: flex; flex-direction: column; background: var(--bg); }
 .scroll { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; padding-inline: 16px; padding-block: 8px 28px; display: flex; flex-direction: column; gap: 18px; }
@@ -644,6 +644,7 @@ svg { width: 20px; height: 20px; flex: none; }
 .t-side { min-width: 0; flex: 1; }
 .t-actions:has(.t-adj) { gap: 6px; }
 .t-actions:has(.t-adj) .btn { flex: 1 1 auto; min-width: 0; padding-left: 8px; padding-right: 8px; }
+.sh-note { color: var(--muted); font-size: 14.5px; line-height: 1.5; margin: 0 0 6px; }
 </style></head><body><div id="splash" aria-hidden="true"><svg viewBox="0 0 1024 1024"><defs><linearGradient id="spG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE3A3"/><stop offset=".45" stop-color="#F6B547"/><stop offset="1" stop-color="#C47E12"/></linearGradient></defs><circle class="sp-ring" cx="512" cy="512" r="318" fill="none" stroke="url(#spG)" stroke-width="64" stroke-linecap="round" transform="rotate(-90 512 512)"/><g class="sp-f"><path transform="translate(512 512) skewX(-9) translate(-512 -512)" d="M418 330h214v84H512v60h100v80H512v144h-94z" fill="#fff"/></g></svg><div class="sp-word">FORMA</div><div class="sp-tag">Train smart · every day</div></div><div id="app"></div><script src="three.min.js"></script><script>/* ---------- Figure engine: angle-based stick figure with IK pins ---------- */
 var RAD = Math.PI / 180;
 var LEN = { T: 28, UA: 14, FA: 13, TH: 18, SH: 18, NK: 4, HR: 5.5 };
@@ -1488,6 +1489,27 @@ var F3 = (function () {
   return { frame: frame, still: still, ok: function () { return init(); } };
 })();
 
+/* never let the app shell itself scroll (iOS can shift it after content changes, misplacing the tab bar) */
+(function () {
+  function pin(el) { if (el && (el.scrollTop || el.scrollLeft)) { el.scrollTop = 0; el.scrollLeft = 0; } }
+  function all() { pin(document.documentElement); pin(document.body); pin(document.getElementById('app')); pin(document.querySelector('.stack')); }
+  document.addEventListener('scroll', all, true);
+  window.addEventListener('resize', all);
+  document.addEventListener('click', function () { setTimeout(all, 50); }, true);
+})();
+/* iOS home-screen apps can report a viewport shorter than the screen; fill the real screen */
+(function () {
+  function fit() {
+    var st = window.navigator.standalone || (window.matchMedia && matchMedia('(display-mode: standalone)').matches);
+    var hgt = window.innerHeight;
+    if (st && /iP(hone|od|ad)/.test(navigator.userAgent)) {
+      var sh = (window.innerWidth > window.innerHeight) ? Math.min(screen.width, screen.height) : Math.max(screen.width, screen.height);
+      hgt = Math.max(hgt, sh);
+    }
+    document.documentElement.style.setProperty('--app-h', hgt + 'px');
+  }
+  fit(); window.addEventListener('resize', fit); window.addEventListener('orientationchange', function () { setTimeout(fit, 300); });
+})();
 /* ================= Storage ================= */
 var KEY = 'repcard.v1', mem = null;
 function load() {
@@ -1498,6 +1520,12 @@ function load() {
   ['rest', 'makeup', 'madeUp', 'log', 'swap', 'adj'].forEach(function (k) { mem[k] = mem[k] || {}; });
   if ([3, 4, 5, 6, 7].indexOf(mem.days) < 0) mem.days = 7;
   save(); return mem;
+}
+function resetAll() {
+  var o = load(), keep = { start: iso(new Date()), done: {}, sets: {}, mode: o.mode, level: o.level, days: o.days, theme: o.theme, sound: o.sound, levelSince: iso(new Date()) };
+  try { localStorage.setItem(KEY, JSON.stringify(keep)); } catch (e) {}
+  mem = null; load();
+  nav.stack = []; render('tab');
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(mem)); } catch (e) {} }
 
@@ -2534,14 +2562,17 @@ function scrProgress() {
 
   var reset = h('section', 'reset');
   var rb = h('button', 'btn btn-ghost btn-wide', 'Reset progress');
-  var cf = h('div', 'confirm'); cf.hidden = true;
-  cf.innerHTML = '<p>This clears your calendar, weights and history, and starts your 4-week plan again from today. This can\'t be undone. Save a backup first if you might want it back.</p>';
-  var yes = h('button', 'btn btn-danger btn-wide', 'Yes, reset everything'), no = h('button', 'btn btn-ghost btn-wide', 'Cancel');
-  yes.onclick = function () { var o = load(); mem = { start: iso(today()), done: {}, sets: {}, mode: o.mode, level: o.level, days: o.days }; load(); save(); render('swap'); };
-  no.onclick = function () { cf.hidden = true; rb.hidden = false; };
-  rb.onclick = function () { cf.hidden = false; rb.hidden = true; };
-  cf.appendChild(yes); cf.appendChild(no);
-  reset.appendChild(rb); reset.appendChild(cf); sc.appendChild(reset);
+  rb.onclick = function () {
+    openSheet(function (card, close) {
+      card.appendChild(h('h3', '', 'Start over?'));
+      card.appendChild(h('p', 'sh-note', 'This clears your calendar, weights and history, and starts your 4-week plan again from today. Your Home/Gym choice, level and training days stay. This can\'t be undone, so save a backup first if you might want it back.'));
+      var yes = h('button', 'btn btn-danger btn-wide', 'Yes, reset everything'), no = h('button', 'btn btn-ghost btn-wide', 'Cancel');
+      yes.onclick = function () { resetAll(); close(); toast('Fresh start', 'Your plan starts again from today.'); };
+      no.onclick = close;
+      card.appendChild(yes); card.appendChild(no);
+    });
+  };
+  reset.appendChild(rb); sc.appendChild(reset);
   return s;
 }
 
